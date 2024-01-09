@@ -2,7 +2,9 @@
 
 if (!hasInterface) exitWith {};
 
-#include "XEH_PREP.sqf"
+#include "XEH_PREP.hpp"
+
+GVAR(usageHash) = createHashMap;
 
 [ELSTRING(common,WeaponsCategory), "MRT_SwitchItemNextClass_R", [LSTRING(railNext), LSTRING(railNext_tooltip)], {
     [1, "next"] call FUNC(switchAttachment) // return
